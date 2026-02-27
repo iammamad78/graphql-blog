@@ -13,7 +13,7 @@ import theme from "./mui/theme.js";
 
 const client = new ApolloClient({
   link: new HttpLink({
-    uri: "https://us-west-2.cdn.hygraph.com/content/cmk0wn9yf03gp07w51vfxs90s/master",
+    uri: import.meta.env.VITE_APP_HYGRAPH_URI,
   }),
   cache: new InMemoryCache(),
 });

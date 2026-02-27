@@ -1,22 +1,7 @@
-import { gql } from "@apollo/client";
-import { useQuery } from "@apollo/client/react";
-
-const QUERY = gql`
-  query {
-    authors {
-      name
-    }
-  }
-`;
+import Header from "./components/layout/Header";
 
 function App() {
-  const { loading, data } = useQuery(QUERY);
-  console.log(data);
-  return (
-    <>
-      <h3>GraphQl</h3>
-    </>
-  );
+  return <Header />;
 }
 
 export default App;
